@@ -58,10 +58,12 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *ideacmd[]  = { "idea", NULL };
-static const char *webcmd[]   = { "chromium", NULL };
+static const char *dmenucmd[]      = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
+static const char *termcmd[]       = { "st", NULL };
+static const char *ideacmd[]       = { "idea", NULL };
+static const char *webcmd[]        = { "chromium", NULL };
+static const char *volumeupcmd[]   = { "volume", "up", NULL };
+static const char *volumedowncmd[] = { "volume", "down", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -69,6 +71,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_i,      spawn,          {.v = ideacmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = webcmd } },
+	{ MODKEY,                       XK_Up,     spawn,          {.v = volumeupcmd } },
+	{ MODKEY,                       XK_Down,   spawn,          {.v = volumedowncmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_l,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_h,      focusstack,     {.i = -1 } },
