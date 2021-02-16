@@ -5,7 +5,7 @@ static const unsigned int borderpx = 1;        /* border pixel of windows */
 static const unsigned int snap     = 32;       /* snap pixel */
 static const int showbar           = 1;        /* 0 means no bar */
 static const int topbar            = 1;        /* 0 means bottom bar */
-static const char *fonts[]         = { "JetBrainsMono-Regular:size=12" };
+static const char *fonts[]         = { "JetBrainsMono-Regular:size=12", "fontawesome-webfont:size=14" };
 static const char dmenufont[]      = "JetBrainsMono-Regular:size=12";
 static const char norm_fg[]        = "#88C0D0";
 static const char norm_bg[]        = "#2E3440";
