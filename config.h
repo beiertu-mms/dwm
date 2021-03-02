@@ -60,7 +60,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]      = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
-static const char *roficmd[]       = { "rofi", "-modi", "combi", "-show", "combi", "-combi-modi", "window,run,ssh", NULL };
+static const char *roficmd[]       = { "rofi", "-show", "window", NULL };
 static const char *termcmd[]       = { "st", NULL };
 static const char *ideacmd[]       = { "idea", NULL };
 static const char *webcmd[]        = { "chromium", NULL };
