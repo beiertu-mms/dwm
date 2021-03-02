@@ -1,5 +1,5 @@
 # dwm - dynamic window manager
-[dwm][1] is an extremely fast, small, and dynamic window manager for X.
+A fork of [dwm][1], a extremely fast, small, and dynamic window manager for X.
 
 ![dwm](./dwm.png)
 
