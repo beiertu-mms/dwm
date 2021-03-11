@@ -7,12 +7,12 @@ static const int showbar           = 1;        /* 0 means no bar */
 static const int topbar            = 1;        /* 0 means bottom bar */
 static const char *fonts[]         = { "JetBrainsMono-Regular:size=12", "fontawesome-webfont:size=14" };
 static const char dmenufont[]      = "JetBrainsMono-Regular:size=12";
-static const char norm_fg[]        = "#88C0D0";
-static const char norm_bg[]        = "#2E3440";
-static const char norm_border[]    = "#4C566A";
-static const char sel_fg[]         = "#EBCB8B";
-static const char sel_bg[]         = "#4C566A";
-static const char sel_border[]     = "#8FBCBB";
+static const char norm_fg[]        = "#bbbbbb"; // "#88C0D0";
+static const char norm_bg[]        = "#222222"; // "#2E3440";
+static const char norm_border[]    = "#444444"; // "#4C566A";
+static const char sel_fg[]         = "#eeeeee"; // "#EBCB8B";
+static const char sel_bg[]         = "#005577"; // "#4C566A";
+static const char sel_border[]     = "#005577"; // "#8FBCBB";
 static const char *colors[][3]     = {
 	/*               fg         bg          border   */
 	[SchemeNorm] = { norm_fg,	norm_bg,	norm_border },
@@ -59,13 +59,16 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]      = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
+// static const char *dmenucmd[]      = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
+static const char *dmenucmd[]      = { "rofi", "-show", "run", NULL };
 static const char *roficmd[]       = { "rofi", "-show", "window", NULL };
 static const char *termcmd[]       = { "st", NULL };
 static const char *ideacmd[]       = { "idea", NULL };
 static const char *webcmd[]        = { "chromium", NULL };
 static const char *volumeupcmd[]   = { "volume", "up", NULL };
 static const char *volumedowncmd[] = { "volume", "down", NULL };
+static const char *micupcmd[]      = { "mic", "up", NULL };
+static const char *micdowncmd[]    = { "mic", "down", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -76,6 +79,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_w,      spawn,          {.v = webcmd } },
 	{ MODKEY,                       XK_Up,     spawn,          {.v = volumeupcmd } },
 	{ MODKEY,                       XK_Down,   spawn,          {.v = volumedowncmd } },
+	{ MODKEY,                       XK_Left,   spawn,          {.v = micdowncmd } },
+	{ MODKEY,                       XK_Right,  spawn,          {.v = micupcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_period, focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_comma,  focusstack,     {.i = -1 } },
