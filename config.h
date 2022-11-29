@@ -73,8 +73,8 @@ static const char *micdowncmd[]    = { "mic", "down", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = rofiruncmd } },
-	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = rofiwindowcmd } },
-	{ MODKEY|ControlMask,           XK_d,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = rofiwindowcmd } },
+	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_i,      spawn,          {.v = ideacmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = webcmd } },
