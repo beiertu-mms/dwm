@@ -28,7 +28,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class            instance    title       tags mask     isfloating   monitor ignoretransient */
-	{ "Chromium",       NULL,       NULL,       1 << 1,       0,           -1,      0 },
+	{ "vivaldi-stable", NULL,       NULL,       1 << 1,       0,           -1,      0 },
 	{ "jetbrains-idea", NULL,       NULL,       1 << 2,       0,           -1,      1 },
 	{ "St",             NULL,       NULL,       1 << 0,       0,           -1,      0 },
 };
@@ -64,7 +64,7 @@ static const char *rofiruncmd[]    = { "rofi", "-show", "run", NULL };
 static const char *rofiwindowcmd[] = { "rofi", "-show", "window", NULL };
 static const char *termcmd[]       = { "st", NULL };
 static const char *ideacmd[]       = { "idea", NULL };
-static const char *webcmd[]        = { "chromium", NULL };
+static const char *webcmd[]        = { "vivaldi-stable", NULL };
 static const char *volumeupcmd[]   = { "volume", "up", NULL };
 static const char *volumedowncmd[] = { "volume", "down", NULL };
 static const char *micupcmd[]      = { "mic", "up", NULL };
