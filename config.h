@@ -1,12 +1,13 @@
 /* See LICENSE file for copyright and license details. */
+#define FONT "JetBrainsMono Nerd Font"
 
 /* appearance */
 static const unsigned int borderpx = 1;        /* border pixel of windows */
 static const unsigned int snap     = 32;       /* snap pixel */
 static const int showbar           = 1;        /* 0 means no bar */
 static const int topbar            = 1;        /* 0 means bottom bar */
-static const char *fonts[]         = { "JetBrainsMono-Regular:size=10", "fontawesome-webfont:size=10" };
-static const char dmenufont[]      = "JetBrainsMono-Regular:size=10";
+static const char *fonts[]         = { FONT":size=9:style=Regular" };
+static const char dmenufont[]      = FONT":size=9:style=Regular";
 static const char norm_fg[]        = "#bbbbbb"; // "#88C0D0";
 static const char norm_bg[]        = "#222222"; // "#2E3440";
 static const char norm_border[]    = "#444444"; // "#4C566A";
