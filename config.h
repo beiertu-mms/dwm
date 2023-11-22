@@ -33,6 +33,7 @@ static const Rule rules[] = {
 	{ "vivaldi-stable", NULL,       NULL,       1 << 1,       0,           -1,      0 },
 	{ "jetbrains-idea", NULL,       NULL,       1 << 2,       0,           -1,      1 },
 	{ "St",             NULL,       NULL,       1 << 0,       0,           -1,      0 },
+	{ "kitty",          NULL,       NULL,       1 << 0,       0,           -1,      0 },
 };
 
 /* layout(s) */
@@ -64,7 +65,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]      = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
 static const char *rofiruncmd[]    = { "rofi", "-show", "run", NULL };
 static const char *rofiwindowcmd[] = { "rofi", "-show", "window", NULL };
-static const char *termcmd[]       = { "st", NULL };
+static const char *termcmd[]       = { "kitty", NULL };
 static const char *ideacmd[]       = { "idea", NULL };
 static const char *webcmd[]        = { "vivaldi-stable", NULL };
 static const char *volumeupcmd[]   = { "volume", "up", NULL };
